@@ -35,7 +35,7 @@ namespace gr {
     class PSCR_LMR2LTE_API sip_signaling : virtual public gr::block
     {
      public:
-      typedef boost::shared_ptr<sip_signaling> sptr;
+      typedef std::shared_ptr<sip_signaling> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of PSCR_LMR2LTE::sip_signaling.

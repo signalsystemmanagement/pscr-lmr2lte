@@ -88,7 +88,7 @@ namespace gr {
 		class sip_signaling_impl : public sip_signaling
 		{
 		private:
-			boost::shared_ptr<gr::thread::thread> d_thread;
+			std::shared_ptr<gr::thread::thread> d_thread;
 			void msg_in(pmt::pmt_t msg);
 			
 			void run();

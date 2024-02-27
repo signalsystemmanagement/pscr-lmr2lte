@@ -44,7 +44,7 @@ namespace gr {
 	*
 	* \param msg A pmt message passed from the scheduler's message handling.
 	*/
-			boost::shared_ptr<gr::thread::thread> d_thread;
+			std::shared_ptr<gr::thread::thread> d_thread;
 			void command(pmt::pmt_t msg);
 			void send_status(pmt::pmt_t flowing);
 			void run();

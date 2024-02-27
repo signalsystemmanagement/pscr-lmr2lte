@@ -357,7 +357,7 @@ namespace gr {
 			// (copied from message_strobe_impl.cc)
 			d_finished = false;
 			d_run = false;
-			d_thread = boost::shared_ptr<gr::thread::thread>(
+			d_thread = std::shared_ptr<gr::thread::thread>(
 			new gr::thread::thread(boost::bind(&sip_signaling_impl::run, this)));
 			GR_LOG_INFO(d_logger, "return block::start()");
 

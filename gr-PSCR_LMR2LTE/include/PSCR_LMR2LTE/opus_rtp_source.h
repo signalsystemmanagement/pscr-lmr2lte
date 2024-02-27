@@ -36,7 +36,7 @@ namespace gr {
     class PSCR_LMR2LTE_API opus_rtp_source : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<opus_rtp_source> sptr;
+      typedef std::shared_ptr<opus_rtp_source> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of PSCR_LMR2LTE::opus_rtp_source.

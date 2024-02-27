@@ -18,6 +18,12 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 
+
+########################################################################
+# Include python binding
+########################################################################
+add_subdirectory(bindings)
+
 ########################################################################
 # Include python install macros
 ########################################################################
@@ -42,7 +48,7 @@ GR_PYTHON_INSTALL(
 include(GrTest)
 
 set(GR_TEST_TARGET_DEPS gnuradio-PSCR_LMR2LTE)
-set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
+set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/python/bindings)
 GR_ADD_TEST(qa_opus_rtp_sink ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_opus_rtp_sink.py)
 GR_ADD_TEST(qa_opus_rtp_source ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_opus_rtp_source.py)
 GR_ADD_TEST(qa_sip_signaling ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_sip_signaling.py)
