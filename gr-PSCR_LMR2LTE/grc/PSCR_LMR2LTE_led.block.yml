@@ -1,7 +1,10 @@
 id: PSCR_LMR2LTE_led
 label: led
 category: '[PSCR_LMR2LTE]'
-flags: [ show_id ]
+
+templates:
+  imports: from gnuradio import PSCR_LMR2LTE
+  make: PSCR_LMR2LTE.led()
 
 parameters:
 -   id: label

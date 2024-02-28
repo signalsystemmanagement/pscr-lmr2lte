@@ -20,4 +20,6 @@ except ModuleNotFoundError:
     pass
 
 # import any pure python here
+from .led import led
+from .label import label
 #

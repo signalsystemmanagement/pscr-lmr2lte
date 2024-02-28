@@ -29,7 +29,9 @@ include(GrPybind)
 ########################################################################
 
 list(APPEND PSCR_LMR2LTE_python_files
-    python_bindings.cc)
+    opus_rtp_sink_python.cc
+    opus_rtp_source_python.cc
+    sip_signaling_python.cc python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(PSCR_LMR2LTE
    ../../..

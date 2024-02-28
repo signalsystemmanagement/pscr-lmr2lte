@@ -1,8 +1,17 @@
 id: PSCR_LMR2LTE_label
 label: label
 category: '[PSCR_LMR2LTE]'
-flags: [ show_id ]
 
+templates:
+  imports: from gnuradio import PSCR_LMR2LTE
+  make: PSCR_LMR2LTE.label()
+
+#  Make one 'parameters' list entry for every parameter you want settable from the GUI.
+#     Keys include:
+#     * id (makes the value accessible as keyname, e.g. in the make entry)
+#     * label (label shown in the GUI)
+#     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+#     * default
 parameters:
 -   id: label
     label: Label

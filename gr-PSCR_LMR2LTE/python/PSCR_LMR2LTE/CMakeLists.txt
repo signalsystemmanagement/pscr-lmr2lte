@@ -22,7 +22,8 @@ add_subdirectory(bindings)
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
-    DESTINATION ${GR_PYTHON_DIR}/gnuradio/PSCR_LMR2LTE
+    led.py
+    label.py DESTINATION ${GR_PYTHON_DIR}/gnuradio/PSCR_LMR2LTE
 )
 
 ########################################################################
@@ -39,3 +40,9 @@ add_custom_target(
   COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}
           ${CMAKE_BINARY_DIR}/test_modules/gnuradio/PSCR_LMR2LTE/
 )
+GR_ADD_TEST(qa_led ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_led.py)
+GR_ADD_TEST(qa_label ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_label.py)
+GR_ADD_TEST(qa_opus_rtp_sink ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_opus_rtp_sink.py)
+GR_ADD_TEST(qa_opus_rtp_sink ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_opus_rtp_sink.py)
+GR_ADD_TEST(qa_opus_rtp_source ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_opus_rtp_source.py)
+GR_ADD_TEST(qa_sip_signaling ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_sip_signaling.py)

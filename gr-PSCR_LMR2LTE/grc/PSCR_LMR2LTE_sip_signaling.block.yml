@@ -2,6 +2,11 @@ id: PSCR_LMR2LTE_sip_signaling
 label: sip_signaling
 category: '[PSCR_LMR2LTE]'
 
+templates:
+  imports: from gnuradio import PSCR_LMR2LTE
+  make: PSCR_LMR2LTE.sip_signaling()
+
+
 parameters:
 -   id: SIP_domain
     label: SIP domain

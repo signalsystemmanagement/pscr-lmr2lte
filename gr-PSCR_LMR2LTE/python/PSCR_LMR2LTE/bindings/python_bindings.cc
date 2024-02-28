@@ -24,6 +24,7 @@ namespace py = pybind11;
 void bind_opus_rtp_sink(py::module& m);
 void bind_opus_rtp_source(py::module& m);
 void bind_opus_rtp_source(py::module& m);
+void bind_sip_signaling(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
