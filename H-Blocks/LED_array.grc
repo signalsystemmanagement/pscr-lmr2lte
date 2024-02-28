@@ -1,6 +1,7 @@
 options:
   parameters:
     author: ''
+    catch_exceptions: 'True'
     category: '[GRC Hier Blocks]'
     cmake_opt: ''
     comment: ''
@@ -648,21 +649,6 @@ blocks:
     coordinate: [312, 596.0]
     rotation: 0
     state: enabled
-- name: import_0
-  id: import
-  parameters:
-    alias: ''
-    comment: 'Due to a bug in gnuradio this import block is needed
-
-      https://github.com/gnuradio/gnuradio/issues/4431'
-    imports: from PyQt5 import Qt
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [24, 107]
-    rotation: 0
-    state: true
 - name: pad_source_0
   id: pad_source
   parameters:
