@@ -21,7 +21,7 @@
 #ifndef INCLUDED_PSCR_LMR2LTE_SIP_SIGNALING_IMPL_H
 #define INCLUDED_PSCR_LMR2LTE_SIP_SIGNALING_IMPL_H
 
-#include <PSCR_LMR2LTE/sip_signaling.h>
+#include <gnuradio/PSCR_LMR2LTE/sip_signaling.h>
 #include <pjsua2.hpp>
 #include <pjsua-lib/pjsua.h>
 #include <pjsip/sip_transport.h>

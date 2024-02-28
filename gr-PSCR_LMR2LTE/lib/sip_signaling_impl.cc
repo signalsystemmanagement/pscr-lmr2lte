@@ -344,7 +344,7 @@ namespace gr {
 				RFchan[i].codec=pmt::PMT_NIL;
 			}
 			message_port_register_in(pmt::mp("msg in"));
-			set_msg_handler(pmt::mp("msg in"), boost::bind(&sip_signaling_impl::msg_in, this, _1));
+			set_msg_handler(pmt::mp("msg in"), boost::bind(&sip_signaling_impl::msg_in, this, boost::placeholders::_1));
 			d_cmd_out = pmt::string_to_symbol("cmd out");
 			message_port_register_out(d_cmd_out);
 		}

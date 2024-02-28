@@ -23,7 +23,7 @@
 
 namespace py = pybind11;
 
-#include <PSCR_LMR2LTE/sip_signaling.h>
+#include <gnuradio/PSCR_LMR2LTE/sip_signaling.h>
 // pydoc.h is automatically generated in the build directory
 #include <sip_signaling_pydoc.h>
 

@@ -21,11 +21,11 @@
 #ifndef INCLUDED_PSCR_LMR2LTE_OPUS_RTP_SOURCE_IMPL_H
 #define INCLUDED_PSCR_LMR2LTE_OPUS_RTP_SOURCE_IMPL_H
 
-#include <PSCR_LMR2LTE/opus_rtp_source.h>
+#include <gnuradio/PSCR_LMR2LTE/opus_rtp_source.h>
 #include <boost/asio.hpp>
 #include <boost/asio/ip/udp.hpp>
 #include <boost/circular_buffer.hpp>
-#include <PSCR_LMR2LTE/packet_headers.h>
+#include <gnuradio/PSCR_LMR2LTE/packet_headers.h>
 #include <chrono>
 #include <opus.h>
 

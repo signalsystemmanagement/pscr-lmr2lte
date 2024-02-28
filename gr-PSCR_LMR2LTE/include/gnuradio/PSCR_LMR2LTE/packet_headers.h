@@ -11,7 +11,7 @@
 #ifndef INCLUDED_PSCR_LMR2LTE_PACKET_HEADERS_H
 #define INCLUDED_PSCR_LMR2LTE_PACKET_HEADERS_H
 
-#include <PSCR_LMR2LTE/udp_header_types.h>
+#include <gnuradio/PSCR_LMR2LTE/udp_header_types.h>
 #include <boost/endian/buffers.hpp>
 
 class header_seq_num

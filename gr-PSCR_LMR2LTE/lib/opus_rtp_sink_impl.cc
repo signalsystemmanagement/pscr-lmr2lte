@@ -52,7 +52,6 @@ namespace gr {
 			pmt::pmt_t val;
 			std::string host;
 			bool reset_udp = false;
-			int dest_id;
 			if (pmt::is_dict(msg)) {
 				//make sure the message is for us (ID must match)
 				val = pmt::dict_ref (msg, pmt::intern("ID"), pmt::PMT_NIL);
@@ -147,7 +146,7 @@ namespace gr {
 			d_rx_start=std::chrono::time_point<std::chrono::steady_clock>::max();
 			d_send_ok=std::chrono::steady_clock::now();
 			message_port_register_in(pmt::mp("command"));
-			set_msg_handler(pmt::mp("command"), boost::bind(&opus_rtp_sink_impl::command, this, _1));
+			set_msg_handler(pmt::mp("command"), boost::bind(&opus_rtp_sink_impl::command, this, boost::placeholders::_1));
 			
 			m_squelch = pmt::string_to_symbol("squelch");
 			message_port_register_out(m_squelch);
@@ -221,7 +220,7 @@ namespace gr {
 
 		void opus_rtp_sink_impl::build_header(char headr)
 		{
-			uint16_t ver = 0x800b;
+			//uint16_t ver = 0x800b;
 			d_seq_num++;
 			header_rtp rtp;
 			if (headr==1) rtp.version_type = d_rtp_ver | 0x80; //mark the start packet
@@ -405,7 +404,8 @@ namespace gr {
 			}
 			#endif
 
-			while (d_udpsocket && (d_localqueue->size()>=d_framesize || eob_rcvd)){
+			assert(d_framesize >= 0);
+			while (d_udpsocket && (d_localqueue->size()>=(size_t)d_framesize || eob_rcvd)){
 				unsigned char cbits[MAX_PACKET_SIZE];
 				float localbuffer[CHANNELS*d_framesize];
 				std::vector<boost::asio::const_buffer> transmitbuffer; // Local boost buffer for transmitting

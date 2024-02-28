@@ -21,7 +21,7 @@
 #ifndef INCLUDED_PSCR_LMR2LTE_SIP_SIGNALING_H
 #define INCLUDED_PSCR_LMR2LTE_SIP_SIGNALING_H
 
-#include <PSCR_LMR2LTE/api.h>
+#include <gnuradio/PSCR_LMR2LTE/api.h>
 #include <gnuradio/block.h>
 
 namespace gr {

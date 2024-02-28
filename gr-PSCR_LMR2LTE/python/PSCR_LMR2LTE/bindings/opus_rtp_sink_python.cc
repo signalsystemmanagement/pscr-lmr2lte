@@ -23,7 +23,7 @@
 
 namespace py = pybind11;
 
-#include <PSCR_LMR2LTE/opus_rtp_sink.h>
+#include <gnuradio/PSCR_LMR2LTE/opus_rtp_sink.h>
 // pydoc.h is automatically generated in the build directory
 #include <opus_rtp_sink_pydoc.h>
 

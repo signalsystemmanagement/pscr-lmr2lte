@@ -120,7 +120,7 @@ namespace gr {
 		{
 			//GR_LOG_INFO(d_logger, "The private constructor");
 			message_port_register_in(pmt::mp("command"));
-			set_msg_handler(pmt::mp("command"), boost::bind(&opus_rtp_source_impl::command, this, _1));
+			set_msg_handler(pmt::mp("command"), boost::bind(&opus_rtp_source_impl::command, this, boost::placeholders::_1));
 			
 			d_cmd_out = pmt::string_to_symbol("cmd out");
 			message_port_register_out(d_cmd_out);

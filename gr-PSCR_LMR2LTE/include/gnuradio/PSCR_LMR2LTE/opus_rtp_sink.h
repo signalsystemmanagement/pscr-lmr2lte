@@ -21,7 +21,7 @@
 #ifndef INCLUDED_PSCR_LMR2LTE_OPUS_RTP_SINK_H
 #define INCLUDED_PSCR_LMR2LTE_OPUS_RTP_SINK_H
 
-#include <PSCR_LMR2LTE/api.h>
+#include <gnuradio/PSCR_LMR2LTE/api.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
