@@ -54,5 +54,6 @@ PYBIND11_MODULE(PSCR_LMR2LTE_python, m)
     // BINDING_FUNCTION_CALLS(
     bind_opus_rtp_sink(m);
     bind_opus_rtp_source(m);
+    bind_sip_signaling(m);
     // ) END BINDING_FUNCTION_CALLS
 }
