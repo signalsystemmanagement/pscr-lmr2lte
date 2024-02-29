@@ -4,14 +4,14 @@ category: '[PSCR_LMR2LTE]'
 
 templates:
   imports: from gnuradio import PSCR_LMR2LTE
-  make: PSCR_LMR2LTE.label()
+  make: |-
+    <%
+        win = 'self._%s_win'%id
+    %>\
+    ${win} = PSCR_LMR2LTE.label("${id}", ${label}, ${cellalignment}, ${verticalalignment}, self)
+    self.${id} = ${win}
+    ${gui_hint() % win}
 
-#  Make one 'parameters' list entry for every parameter you want settable from the GUI.
-#     Keys include:
-#     * id (makes the value accessible as keyname, e.g. in the make entry)
-#     * label (label shown in the GUI)
-#     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
-#     * default
 parameters:
 -   id: label
     label: Label
@@ -41,16 +41,6 @@ inputs:
 -   domain: message
     id: label
     optional: true
-
-templates:
-    imports: import PSCR_LMR2LTE
-    make: |-
-        <%
-            win = 'self._%s_win'%id
-        %>\
-        ${win} = PSCR_LMR2LTE.label("${id}", ${label}, ${cellalignment}, ${verticalalignment}, self)
-        self.${id} = ${win}
-        ${gui_hint() % win}
 
 documentation: |-
     This block makes a basic label

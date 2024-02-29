@@ -2,10 +2,6 @@ id: PSCR_LMR2LTE_led
 label: led
 category: '[PSCR_LMR2LTE]'
 
-templates:
-  imports: from gnuradio import PSCR_LMR2LTE
-  make: PSCR_LMR2LTE.led()
-
 parameters:
 -   id: label
     label: Label
@@ -56,7 +52,7 @@ inputs:
     optional: true
 
 templates:
-    imports: import PSCR_LMR2LTE
+    imports: from gnuradio import PSCR_LMR2LTE
     make: |-
         <%
             win = 'self._%s_win'%id
