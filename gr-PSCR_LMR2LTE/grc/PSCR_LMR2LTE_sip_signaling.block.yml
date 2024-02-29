@@ -4,7 +4,7 @@ category: '[PSCR_LMR2LTE]'
 
 templates:
   imports: from gnuradio import PSCR_LMR2LTE
-  make: PSCR_LMR2LTE.sip_signaling()
+  make: PSCR_LMR2LTE.sip_signaling(${SIP_domain}, ${PCSCF_addr})
 
 
 parameters:
@@ -25,11 +25,6 @@ outputs:
 -   id: cmd out
     domain: message
     optional: true
-
-templates:
-    imports: import PSCR_LMR2LTE
-    make: PSCR_LMR2LTE.sip_signaling(${SIP_domain}, ${PCSCF_addr})
-
 
 #  'file_format' specifies the version of the GRC yml format used in the file
 #  and should usually not be changed.
