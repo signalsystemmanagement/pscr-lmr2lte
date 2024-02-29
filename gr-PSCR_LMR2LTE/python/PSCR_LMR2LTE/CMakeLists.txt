@@ -43,6 +43,5 @@ add_custom_target(
 GR_ADD_TEST(qa_led ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_led.py)
 GR_ADD_TEST(qa_label ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_label.py)
 GR_ADD_TEST(qa_opus_rtp_sink ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_opus_rtp_sink.py)
-GR_ADD_TEST(qa_opus_rtp_sink ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_opus_rtp_sink.py)
 GR_ADD_TEST(qa_opus_rtp_source ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_opus_rtp_source.py)
 GR_ADD_TEST(qa_sip_signaling ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_sip_signaling.py)

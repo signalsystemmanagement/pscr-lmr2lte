@@ -23,7 +23,6 @@ namespace py = pybind11;
 // BINDING_FUNCTION_PROTOTYPES(
 void bind_opus_rtp_sink(py::module& m);
 void bind_opus_rtp_source(py::module& m);
-void bind_opus_rtp_source(py::module& m);
 void bind_sip_signaling(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
@@ -54,7 +53,6 @@ PYBIND11_MODULE(PSCR_LMR2LTE_python, m)
     /**************************************/
     // BINDING_FUNCTION_CALLS(
     bind_opus_rtp_sink(m);
-    bind_opus_rtp_source(m);
     bind_opus_rtp_source(m);
     // ) END BINDING_FUNCTION_CALLS
 }

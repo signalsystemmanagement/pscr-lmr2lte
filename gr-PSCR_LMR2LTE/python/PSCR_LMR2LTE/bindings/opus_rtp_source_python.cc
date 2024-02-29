@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(opus_rtp_source.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(689e018366f83950966ddf3f3306e3e0)                     */
+/* BINDTOOL_HEADER_FILE_HASH(41cfaa4ff833c384e3c2bfad499ac721)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -40,11 +40,6 @@ void bind_opus_rtp_source(py::module& m)
            py::arg("port"),
            py::arg("samprate"),
            py::arg("ipv6"),
-           D(opus_rtp_source,make)
-        )
-        
-
-
            D(opus_rtp_source,make)
         )
         
