@@ -148,8 +148,8 @@ class LEDIndicator(QFrame):
 		smallestDim = smallestDim/2
 		smallestDim -= 2
 		## rect.moveCenter(QPoint(size.width()/2,size.height()/2))
-		center_x = size.width()/2
-		center_y = size.height()/2
+		center_x = int(size.width()/2)
+		center_y = int(size.height()/2)
 		centerpoint = QPoint(center_x,center_y)
 		
 		# Draw the border
