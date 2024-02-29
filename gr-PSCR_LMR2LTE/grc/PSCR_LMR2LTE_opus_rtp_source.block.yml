@@ -22,9 +22,8 @@ parameters:
     default: '48000'
 -   id: ipv6
     label: Enable IPv6 Support
-    dtype: enum
-    options: ['False', 'True']
-    option_labels: ['No', 'Yes']
+    dtype: bool
+    default: false
 
 -   id: tx_freq_offset
     label: Tx Frequency Offset
