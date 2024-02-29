@@ -4,7 +4,9 @@ category: '[PSCR_LMR2LTE]'
 
 templates:
   imports: from gnuradio import PSCR_LMR2LTE
-  make: PSCR_LMR2LTE.opus_rtp_sink()
+  make: |-
+    PSCR_LMR2LTE.opus_rtp_sink(${addr}, ${rport}, ${lport}, ${samprate})
+    self.${id}.set_chan(${rx_freq_offset}, ${SIP_user}, ${SIP_pw},${uri})
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:

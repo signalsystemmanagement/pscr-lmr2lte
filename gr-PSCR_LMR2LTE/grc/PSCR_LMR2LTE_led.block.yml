@@ -2,6 +2,18 @@ id: PSCR_LMR2LTE_led
 label: led
 category: '[PSCR_LMR2LTE]'
 
+templates:
+    imports: from gnuradio import PSCR_LMR2LTE
+    make: |-
+        <%
+            win = 'self._%s_win'%id
+        %>\
+        ${win} = PSCR_LMR2LTE.led("${id}", ${label}, "${color}", ${maxSize}, ${position}, ${cellalignment}, ${verticalalignment}, self)
+        self.${id} = ${win}
+        ${gui_hint() % win}
+    callbacks:
+    - setColor(${color})
+
 parameters:
 -   id: label
     label: Label
@@ -50,18 +62,6 @@ inputs:
 -   domain: message
     id: color
     optional: true
-
-templates:
-    imports: from gnuradio import PSCR_LMR2LTE
-    make: |-
-        <%
-            win = 'self._%s_win'%id
-        %>\
-        ${win} = PSCR_LMR2LTE.led("${id}", ${label}, "${color}", ${maxSize}, ${position}, ${cellalignment}, ${verticalalignment}, self)
-        self.${id} = ${win}
-        ${gui_hint() % win}
-    callbacks:
-    - setColor(${color})
 
 documentation: |-
     This block makes a basic LED indicator
